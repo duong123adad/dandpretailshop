@@ -30,5 +30,8 @@
     "node-cron": "^4.0.5",
     "nodemailer": "^6.10.0",
     "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3"
   }
 }
