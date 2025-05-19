@@ -140,7 +140,7 @@ const HomePage = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "https:://dandpretailshop.onrender.com/api/products/batch/products-with-batches"
+          "https://dandpretailshop.onrender.com/api/products/batch/products-with-batches"
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -158,7 +158,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("https:://dandpretailshop.onrender.com/api/categories");
+        const response = await fetch("https://dandpretailshop.onrender.com/api/categories");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

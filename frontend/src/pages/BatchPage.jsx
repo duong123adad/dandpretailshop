@@ -227,7 +227,7 @@ function ShelfInventoryPage() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get("https:://dandpretailshop.onrender.com/api/batches", {
+      const response = await axios.get("https://dandpretailshop.onrender.com/api/batches", {
         params: { search: searchTerm, status: statusFilter },
       });
       setShelfData(response.data);

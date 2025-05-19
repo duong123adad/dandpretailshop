@@ -43,7 +43,7 @@ const VerifyResetOTPPage = () => {
 
         try {
             const response = await axios.post(
-                "https:://dandpretailshop.onrender.com/api/auth/verify-reset-password",
+                "https://dandpretailshop.onrender.com/api/auth/verify-reset-password",
                 { otp, newPassword },
                 {
                     withCredentials: true, // Important for sending cookies

@@ -18,7 +18,7 @@ const ForgotPasswordPage = () => {
 
         try {
             const response = await axios.post(
-                "https:://dandpretailshop.onrender.com/api/auth/request-password-reset",
+                "https://dandpretailshop.onrender.com/api/auth/request-password-reset",
                 { email },
                 {
                   withCredentials: true, // Important for sending cookies

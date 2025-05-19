@@ -25,7 +25,7 @@ const CategoryManager = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('https:://dandpretailshop.onrender.com/api/categories/tree');
+      const response = await axios.get('https://dandpretailshop.onrender.com/api/categories/tree');
       setCategories(response.data);
     } catch (error) {
       showSnackbar('Load failed', 'error');
@@ -61,8 +61,8 @@ const CategoryManager = () => {
       }
       
       const url = editMode 
-        ? `https:://dandpretailshop.onrender.com/api/categories/${formValues._id}`
-        : 'https:://dandpretailshop.onrender.com/api/categories';
+        ? `https://dandpretailshop.onrender.com/api/categories/${formValues._id}`
+        : 'https://dandpretailshop.onrender.com/api/categories';
       
       const payload = {
         ...formValues,
@@ -81,7 +81,7 @@ const CategoryManager = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https:://dandpretailshop.onrender.com/api/categories/${id}`);
+      await axios.delete(`https://dandpretailshop.onrender.com/api/categories/${id}`);
       fetchCategories();
       showSnackbar('Deleted');
     } catch (error) {
