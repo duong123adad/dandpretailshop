@@ -121,7 +121,7 @@ function ShelfInventoryPage() {
 
     try {
       // Submit return receipt
-      const response = await axios.post("http://localhost:8000/api/returns", {
+      const response = await axios.post("https://dandpretailshop.onrender.com/api/returns", {
         batchId: selectedReturnBatch._id,
         supplierId: selectedReturnBatch.supplier?._id,
         quantity: parseInt(returnQuantity),
@@ -134,7 +134,7 @@ function ShelfInventoryPage() {
       // Send email to supplier
       if (selectedReturnBatch.supplier?.contact?.email) {
         try {
-          await axios.post(`http://localhost:8000/api/returns/${response.data._id}/resend-email`);
+          await axios.post(`https://dandpretailshop.onrender.com/api/returns/${response.data._id}/resend-email`);
           alert("Email đã được gửi thành công đến nhà cung cấp.");
         } catch (emailError) {
           console.error("Lỗi khi gửi email:", emailError);
@@ -182,7 +182,7 @@ function ShelfInventoryPage() {
     const userId = localStorage.getItem("userId");
     try {
       await axios.put(
-        `http://localhost:8000/api/batches/${selectedTransferBatch._id}/transfer-to-shelf`,
+        `https://dandpretailshop.onrender.com/api/batches/${selectedTransferBatch._id}/transfer-to-shelf`,
         { quantity: parseInt(transferQuantity) }
       );
       await fetchData();
@@ -211,7 +211,7 @@ function ShelfInventoryPage() {
 
     try {
       await axios.put(
-        `http://localhost:8000/api/batches/${selectedWarehouseTransferBatch._id}/transfer-to-warehouse`,
+        `https://dandpretailshop.onrender.com/api/batches/${selectedWarehouseTransferBatch._id}/transfer-to-warehouse`,
         { quantity: parseInt(warehouseTransferQuantity) }
       );
       await fetchData();
@@ -227,7 +227,7 @@ function ShelfInventoryPage() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get("http://localhost:8000/api/batches", {
+      const response = await axios.get("http://https://dandpretailshop.onrender.com/api/batches", {
         params: { search: searchTerm, status: statusFilter },
       });
       setShelfData(response.data);

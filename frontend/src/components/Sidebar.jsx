@@ -135,7 +135,7 @@ const Sidebar = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:8000/api/auth/logout",
+        "https://dandpretailshop.onrender.com/api/auth/logout",
         {},
         {
           headers: {

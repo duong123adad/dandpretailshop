@@ -39,7 +39,7 @@ const RegisterPage = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/auth/initiate-customer-signup",
+                "http://https://dandpretailshop.onrender.com/api/auth/initiate-customer-signup",
                 {
                     username,
                     password,

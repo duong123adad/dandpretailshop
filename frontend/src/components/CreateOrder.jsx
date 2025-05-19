@@ -61,7 +61,7 @@ const CreateOrder = () => {
       setLoading(true);
       try {
         const productsRes = await axios.get(
-          "http://localhost:8000/api/products/batch/products-with-batches",
+          "https://dandpretailshop.onrender.com/api/products/batch/products-with-batches",
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -80,7 +80,7 @@ const CreateOrder = () => {
       setLoadingCustomers(true);
       try {
         const customersRes = await axios.get(
-          "http://localhost:8000/api/user?role=customer",
+          "https://dandpretailshop.onrender.com/api/user?role=customer",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setCustomers(customersRes.data);
@@ -98,7 +98,7 @@ const CreateOrder = () => {
     if (value.startsWith("BATCH-")) {
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/products/batch/${value}`,
+          `https://dandpretailshop.onrender.com/api/products/batch/${value}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const productWithStock = {
@@ -130,7 +130,7 @@ const CreateOrder = () => {
         }
       } else {
         const res = await axios.get(
-          `http://localhost:8000/api/batches/product/${product.id}`,
+          `https://dandpretailshop.onrender.com/api/batches/product/${product.id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         availableBatches = res.data.filter((b) => b.quantity_on_shelf > 0);
@@ -334,7 +334,7 @@ const CreateOrder = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/orders",
+        "https://dandpretailshop.onrender.com/api/orders",
         orderData,
         {
           headers: { Authorization: `Bearer ${token}` },
