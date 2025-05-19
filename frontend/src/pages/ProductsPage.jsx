@@ -60,7 +60,7 @@ const ProductListPage = () => {
   const fetchProductsWithBatches = async () => {
     try {
       const response = await axios.get(
-        "http://https://dandpretailshop.onrender.com/api/products/batch/products-with-batches"
+        "https:://dandpretailshop.onrender.com/api/products/batch/products-with-batches"
       );
       if (response.data.success) {
         setProductsWithBatches(response.data.data);
@@ -75,7 +75,7 @@ const ProductListPage = () => {
   const fetchProductsWithBatchesByCategory = async (categoryId) => {
     try {
       const response = await axios.get(
-        `http://https://dandpretailshop.onrender.com/api/products/batch/products-with-batches?category=${categoryId}`
+        `https:://dandpretailshop.onrender.com/api/products/batch/products-with-batches?category=${categoryId}`
       );
       if (response.data.success) {
         setProductsWithBatches(response.data.data);
@@ -90,7 +90,7 @@ const ProductListPage = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        "http://https://dandpretailshop.onrender.com/api/categories/tree"
+        "https:://dandpretailshop.onrender.com/api/categories/tree"
       );
       setCategories(response.data);
     } catch (error) {
@@ -147,7 +147,7 @@ const ProductListPage = () => {
 
   const fetchCartInfo = async () => {
     try {
-      const response = await axios.get("http://https://dandpretailshop.onrender.com/api/cart", {
+      const response = await axios.get("https:://dandpretailshop.onrender.com/api/cart", {
         headers: { Authorization: `Bearer ${authToken}` },
       });
       if (response.data && response.data.items) {
@@ -164,7 +164,7 @@ const ProductListPage = () => {
   const handleAddToCartToApi = async (product, quantity, selectedUnitName) => {
     try {
       const response = await axios.post(
-        "http://https://dandpretailshop.onrender.com/api/cart/add",
+        "https:://dandpretailshop.onrender.com/api/cart/add",
         [
           {
             productId: product._id,

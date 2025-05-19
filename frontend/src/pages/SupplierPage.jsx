@@ -47,8 +47,8 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
 
-const API_URL = 'http://https://dandpretailshop.onrender.com/api/suppliers';
-const PRODUCTS_API = 'http://https://dandpretailshop.onrender.com/api/products';
+const API_URL = 'https:://dandpretailshop.onrender.com/api/suppliers';
+const PRODUCTS_API = 'https:://dandpretailshop.onrender.com/api/products';
 
 const SupplierSchema = yup.object().shape({
   name: yup.string().required('Bắt buộc nhập').max(100, 'Tối đa 100 ký tự'),

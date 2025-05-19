@@ -36,7 +36,7 @@ const connectDB = async () => {
 connectDB();
 
 app.use(cors({
-    origin: ["https://retailshopfe.vercel.app", "https://beretail.vercel.app"],
+    origin: ["https://retailshopfe.vercel.app", "https://dandpretailshop.onrender.com"],
     credentials: true,
 }));
 

@@ -38,7 +38,7 @@ const VerifyOTPPage = () => {
 
         try {
             const response = await axios.post(
-                "http://https://dandpretailshop.onrender.com/api/auth/verify-customer-signup",
+                "https:://dandpretailshop.onrender.com/api/auth/verify-customer-signup",
                 { otp },
                 {
                     withCredentials: true, // Important for sending cookies
@@ -67,7 +67,7 @@ const VerifyOTPPage = () => {
                 return;
             }
             const response = await axios.post(
-                "http://https://dandpretailshop.onrender.com/api/auth/initiate-customer-signup", // Gọi lại API gửi OTP
+                "https:://dandpretailshop.onrender.com/api/auth/initiate-customer-signup", // Gọi lại API gửi OTP
                 { email: storedEmail },
                 {
                     withCredentials: true, // Important for sending cookies
