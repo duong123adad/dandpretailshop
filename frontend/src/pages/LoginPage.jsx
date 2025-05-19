@@ -40,7 +40,7 @@ const LoginPage = () => {
     setError("");
     try {
       const response = await axios.post(
-        "https:://dandpretailshop.onrender.com/api/auth/login",
+        "https://dandpretailshop.onrender.com/api/auth/login",
         {
           username: username,
           password: password,
